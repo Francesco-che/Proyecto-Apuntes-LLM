@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+:root{
+    --color1: #0d3341;
+    --color2: #088d9edc;
+    --color3: #07be69;
+    --color4: #ffe158;
+    --color5: #fff778;
+}
+* { /*esto reduce los bordes "predeterminados" del navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #131313;
+}
+.encabezado-index{
+    background-color: var(--color1);
+    border: solid 1px black;
+    position: sticky;
+    top: 10px;
+    z-index: 100;  /* siempre visible */
+    min-height: 80px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+.encabezado-logo {
+    width: 15em;
+
+}      
+.contenedor-video{
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    position: relative;
+    overflow: hidden;
+    margin-top: -6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Clave para que no se deforme */
+    z-index: 1;
+}
+.video-text {
+    position: relative;
+    z-index: 2; /* Encima del video */
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.247);
+    padding: 5em;
+    border-radius: 2em;
+    width: 100%;
+}
+.video-text h1 {
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 3em;
+}
+.contenido-principal {
+    background-color: var(--color2);
+    margin: 3em;
+    border-radius: 1em;
+    padding: 3em;
+    border: solid whitesmoke;
+}
+.contenido-principal h1{
+    font-family: "Tomorrow", sans-serif;
+    font-size: 2.5em;
+    padding: 0.4em;
+    background-color: var(--color1);
+    border-radius: 10px;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 1em;
+}
