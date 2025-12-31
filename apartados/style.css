@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+:root{
+    --color1: #0d3341;
+    --color2: #088d9edc;
+    --color3: #07be69;
+    --color4: #ffe158;
+    --color5: #fff778;
+    --grisoscuro: rgb(17, 17, 17);
+}
+* { /*esto reduce los bordes "predeterminados" del navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.contenedor {
+    display: grid;
+    /* Define dos columnas: la primera (barra lateral) ocupa el espacio 1fr */
+    /* y la segunda (contenido principal) ocupa el espacio 5fr */
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+        'encabezado encabezado'
+        'barra-lateral contenido-principal'; /* El encabezado ocupa las 2 columnas y 1 fila */
+    width: 100%;
+    height: 100vh;
+    padding: 0.5em;
+    gap: 1em;
+}
+.encabezado{ /*-------- ENCABEZADO ------------ */
+    background-color: var(--color1);
+    border: solid 2px black;
+    grid-area: encabezado;             /*grid-area define el nombre de cada sección, con grid-template-areas se pueden organizar */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 80px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 25px;
+    
+}
+/*-------- ENCABEZADO ------------ */
+
+
+.barra-lateral {    /*-------- BARRA LATERAL ------------ */
+    background-color: var(--color1);
+
+    padding: 1em;
+    border-radius: 1em;
+    border: solid 1px black;
+    grid-area: barra-lateral;
+    position: sticky;
+    height: auto;
+
+    font-family: "Tomorrow", sans-serif;
+    display: flex;
+    flex-flow: column;
+}
+.barra-lateral-elemento {
+    width: 100%;
+    background-color: var(--color2);
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 1em;
+    /*border: solid 1px black;*/
+    cursor: pointer;
+    font-size: 1.2em;
+    color: whitesmoke;
+    text-decoration: none;
+
+    transition: width 0.3s ease-in-out, color 0.3s ease-in-out, margin-left 0.3s ease-in-out, background-color 0.5s ease-in-out;
+}
+.barra-lateral-elemento:hover{ 
+    width: 70%;
+    margin-left: 10%;
+    background-color: var(--color3);
+    color: black;
+}
+.barra-lateral-elementos-anidado {
+    background-color: var(--color3);
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    /*border: solid 1px black;*/
+}
+/*-------- BARRA LATERAL ------------ */
+
+.contenido-principal { /*-------- CONTENIDO PRINCIPAL ------------ */
+    background-color: var(--color4);
+    border-radius: 1em;
+    border: solid 2px black;
+    grid-area: contenido-principal;
+    padding: 2em;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+
+    background-image: url('../img/background1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenido-principal h2{
+    font-family: "Tomorrow", sans-serif;
+    font-size: 2.5em;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0.4em;
+
+    background-color: var(--grisoscuro);
+    color: var(--color4);    
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+/*-------- CONTENIDO PRINCIPAL ------------ */
