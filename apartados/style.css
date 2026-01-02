@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 :root{
+    /*Colores*/
     --color1: #0d3341;
     --color2: #088d9edc;
     --color3: #07be69;
     --color4: #ffe158;
     --color5: #fff778;
-    --grisoscuro: rgb(17, 17, 17);
+    --grisoscuro: #111111;
+    --gris: #292929;
+    --colortexto: #f5f5f5;
+
+    /*Tamaños*/
+    --tamañoTexto: 1.5em;
+    --tamañoTextoTabla: 1em;
+    --bordeRedondeado: 10px;
+    --bordeRedondeadoSecciones: 40px;
+
+    /*Tipografías*/
+    --parrafos: "Exo 2", sans-serif;
+
+    /* tamaños tabla*/
+    --cellpadding: 10px;
+    --cellspacing: 5px;
+
 }
 * { /*esto reduce los bordes "predeterminados" del navegador*/
     margin: 0;
@@ -30,27 +47,29 @@ body {
     gap: 1em;
 }
 .encabezado{ /*-------- ENCABEZADO ------------ */
-    background-color: var(--color1);
-    border: solid 2px black;
+    background-color: var(--gris);
+    border: solid 2px whitesmoke;
     grid-area: encabezado;             /*grid-area define el nombre de cada sección, con grid-template-areas se pueden organizar */
+    
     position: sticky;
     top: 0;
     z-index: 100;
+
     min-height: 80px;
     margin-left: 15%;
     margin-right: 15%;
-    border-radius: 25px;
-    
+    border-radius: var(--bordeRedondeadoSecciones);
+    padding: 1em;
 }
 /*-------- ENCABEZADO ------------ */
 
 
 .barra-lateral {    /*-------- BARRA LATERAL ------------ */
-    background-color: var(--color1);
+    background-color: var(--gris);
 
     padding: 1em;
-    border-radius: 1em;
-    border: solid 1px black;
+    border-radius: var(--bordeRedondeadoSecciones);
+    border: solid 2px whitesmoke;
     grid-area: barra-lateral;
     position: sticky;
     height: auto;
@@ -61,44 +80,53 @@ body {
 }
 .barra-lateral-elemento {
     width: 100%;
-    background-color: var(--color2);
+    background-color: var(--grisoscuro);
     padding: 1em;
-    border-radius: 5px;
+    border-radius: var(--bordeRedondeadoSecciones);
     margin-top: 1em;
     /*border: solid 1px black;*/
     cursor: pointer;
     font-size: 1.2em;
-    color: whitesmoke;
+    color: var(--colortexto);
     text-decoration: none;
 
     transition: width 0.3s ease-in-out, color 0.3s ease-in-out, margin-left 0.3s ease-in-out, background-color 0.5s ease-in-out;
 }
 .barra-lateral-elemento:hover{ 
-    width: 70%;
+    width: 75%;
+    margin-left: 10%;
+    background-color: var(--color3);
+    color: var(--grisoscuro);
+}
+.barra-lateral-elemento-anidado {
+    background-color: var(--color3);
+    padding: 1em;
+    width: 80%;
+    border-radius: var(--bordeRedondeadoSecciones);
+    /*border: solid 1px black;*/
+    margin-top: 0.5em;
+
+    text-decoration: none;
+    color: var(--colortexto);
+
+    transition: width 0.3s ease-in-out, color 0.3s ease-in-out, margin-left 0.3s ease-in-out, background-color 0.5s ease-in-out;
+}
+.barra-lateral-elemento-anidado:hover{ 
+    width: 75%;
     margin-left: 10%;
     background-color: var(--color3);
     color: black;
-}
-.barra-lateral-elementos-anidado {
-    background-color: var(--color3);
-    padding: 1em;
-    border-radius: 5px;
-    margin-top: 0.5em;
-    margin-left: 1em;
-    /*border: solid 1px black;*/
 }
 /*-------- BARRA LATERAL ------------ */
 
 .contenido-principal { /*-------- CONTENIDO PRINCIPAL ------------ */
     background-color: var(--color4);
-    border-radius: 1em;
-    border: solid 2px black;
+    border-radius: var(--bordeRedondeadoSecciones);
+    border: solid 2px whitesmoke;
     grid-area: contenido-principal;
-    padding: 2em;
-    font-family: "Poppins", sans-serif;
-    font-size: 1em;
+    padding: 4em;
 
-    background-image: url('../img/background1.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/background5.png"); /* para oscurecer un poco el fondo*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,8 +141,145 @@ body {
 
     background-color: var(--grisoscuro);
     color: var(--color4);    
-    border-radius: 10px;
+    border-radius: var(--bordeRedondeadoSecciones);
     text-align: center;
     margin-bottom: 1em;
+    margin-top: 1em;
+
+    transition: font-size 0.2s ease-in-out, margin-bottom 0.2s ease-in-out, margin-top 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+.contenido-principal h2:hover{ /* una pequeña interaccion de los apartados*/
+    font-size: 3em;
+    margin-bottom: 0.75em;
+    margin-top: 0.75em;
+    background-color: black;
+}
+.contenido-principal h3{
+    font-family: "Tomorrow", sans-serif;
+    font-size: 2em;
+
+    padding: 0.8em;
+    background-color: var(--gris);
+    color: var(--color5);    
+    border-radius: var(--bordeRedondeadoSecciones);
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-right: 50%;
+
+    transition: font-size 0.2s ease-in-out, margin-right 0.4s ease-in-out, background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+}
+.contenido-principal h3:hover{ /* una pequeña interaccion de los apartados*/
+    font-size: 2.5em;
+    background-color: black;
+    margin-right: 30%;
+    padding: 0.3em;
+}
+.contenido-principal p{
+    font-size: var(--tamañoTexto);
+    line-height: var(--tamañoTexto);
+    color: var(--colortexto);
+    font-family: var(--parrafos);
+}
+
 /*-------- CONTENIDO PRINCIPAL ------------ */
+/*-------- Estilos formas de texto ------------ */
+.ejemplo_parrafo{
+    text-align: center;
+    background-color: var(--gris);
+    margin: 1em 40%;
+    padding: 0.5em;
+    border-radius: var(--bordeRedondeado);
+    color: var(--colortexto);
+
+    transition: margin 0.5s ease-in-out, padding 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.ejemplo_parrafo:hover{ /* animacion ejemplo parrafo */
+    margin: 1em 35%;
+    padding: 1em;
+    background-color: var(--color1);
+}
+.ejemplo_imagen{
+    border: solid 6px var(--color4);
+
+    height: auto;
+    max-width: 100%; /*la imagen no se deforma ni desborda del contenedor padre (el contenido-principal) */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    transition: border 0.5s ease-in-out, width 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+.ejemplo_imagen:hover{
+    border: solid 8px var(--color3);
+    padding: 0.5em;
+}
+.contenido-principal ul{
+    color: var(--color5);
+    font-family: var(--parrafos);
+    font-size: var(--tamañoTexto);
+    padding: 1em;
+}
+.contenido-principal ol{
+    color: var(--color5);
+    font-family: var(--parrafos);
+    font-size: var(--tamañoTexto);
+    padding: 1em;
+}
+.ejemplo_enlace{
+    color: var(--color5);
+    font-family: var(--parrafos);
+    font-size: 1em;
+    text-decoration: none;
+}
+
+
+/*.tabla-contenido{
+    border: solid 4px black;
+    background-color: var(--grisoscuro);
+    color: var(--colortexto);
+    padding: var(--cellpadding);
+    font-family: var(--parrafos);
+    border-spacing: var(--cellspacing);
+}*/
+/*-------- Estilos formas de texto ------------ */
+
+/*-------- TABLA ------------ */
+.tabla-contenido {
+    width: 80%;
+    font-family: sans-serif;
+
+    background-color: var(--grisoscuro);
+    border: solid 4px black;
+    color: var(--colortexto);
+    margin: 2em 10%;
+    padding: 0.4em;
+    font-family: var(--parrafos);
+}
+
+/* (thead) */
+.tabla-contenido thead tr {
+    background-color: var(--grisoscuro);
+    color: var(--color4);
+    text-align: center;
+
+}
+/* (th y td) */
+.tabla-contenido th, .tabla-contenido td {
+    padding: 12px 15px;
+    border: 4px solid black;
+
+}
+
+/* esto hace que la tabla este estilo zebra */
+.tabla-contenido tbody tr:nth-of-type(even) {
+    background-color: var(--gris);
+}
+
+.tabla-contenido tbody td:hover {
+    background-color: var(--color4);
+    color: var(--grisoscuro);
+}
+
+/*-------- TABLA ------------ */

@@ -19,22 +19,252 @@
             <a class="barra-lateral-elemento" href="#Etiquetas Básicas">2. Etiquetas Básicas</a>
             <a class="barra-lateral-elemento" href="#Atributos">3. Atributos</a>
             <a class="barra-lateral-elemento" href="#Texto formateado">4. Texto formateado</a>
-            <a class="barra-lateral-elemento" href="#Comentarios en HTML">5. Comentarios en HTML</a>
-            <a class="barra-lateral-elemento" href="#Imágenes en HTML">6. Imágenes en HTML</a>
-            <a class="barra-lateral-elemento" href="#Enlaces en HTML">7. Enlaces en HTML</a>
-            <a class="barra-lateral-elemento" href="#Listas en HTML">8. Listas en HTML</a>
-            <a class="barra-lateral-elemento" href="#Tablas en HTML">9. Tablas en HTML</a>
+            <a class="barra-lateral-elemento" href="#Comentarios en HTML">5. Comentarios HTML</a>
+            <a class="barra-lateral-elemento" href="#Imágenes en HTML">6. Imágenes HTML</a>
+            <a class="barra-lateral-elemento" href="#Enlaces en HTML">7. Enlaces HTML</a>
+            <a class="barra-lateral-elemento" href="#Listas en HTML">8. Listas HTML</a>
+            <a class="barra-lateral-elemento" href="#Tablas en HTML">9. Tablas HTML</a>
         </aside>
         <main class="contenido-principal">
             <h2 id="Introducción">1. Introducción</h2>
+                <p>Los documentos HTML, se basan en una <b>estructura jerarquica de etiquetas</b> (HyperText Markup Language).</p>
+	            <p>Cada página web HTML, tiene una estructura básica, comienzan con <u>!DOCTYPE html</u> (esto le identifica a los navegadores el tipo de archivo que tiene que enseñar), y además usan las etiquetas de <u>head</u> (encabezado), <u>html</u> (la etiqueta que agrupa la web) y <u>body</u> (que es el contenido de la web).</p>
+                <p class="ejemplo_parrafo"><b>&lt;!DOCTYPE html&gt;</b></p>
+
             <h2 id="Etiquetas Básicas">2. Etiquetas Básicas</h2>
+            <table class="tabla-contenido">
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;title&gt;</td>
+                        <td>El título de la ventana en el navegador</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;h1&gt; a &lt;h6&gt;</td>
+                        <td>Definen los títulos y subtítulos (jerarquía)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt;</td>
+                        <td>Define un párrafo de texto (paragraph)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;td&gt;</td>
+                        <td>Define una celda de datos en una tabla (table data)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;br&gt;</td>
+                        <td>Inserta un salto de línea simple (break)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>                                                                
+            <p>Ejemplo de titulos y subtitulos.</p>
+		        <h1 class="ejemplo_parrafo">Ejemplo H1</h1>
+		        <h1 class="ejemplo_parrafo">Ejemplo H2</h1>
+		        <h4 class="ejemplo_parrafo">Ejemplo H3</h4>
+		        <h4 class="ejemplo_parrafo">Ejemplo H4</h4>
+		        <h5 class="ejemplo_parrafo">Ejemplo H5</h5>
+		        <h6 class="ejemplo_parrafo">Ejemplo H6</h6>
+
             <h2 id="Atributos">3. Atributos</h2>
+            <p>Son elementos que añaden información extra a las etiquetas HTML, ya sea para modificar su comportamiento o apariencia.</p>
+            <p class="ejemplo_parrafo">Siguen el formato: <b>nombre="valor</b></p>
+
             <h2 id="Texto formateado">4. Texto formateado</h2>
+	            <p>Son etiquetas que se pueden añadir al texto para modificarlo visualmente, ya sea por importancia del texto, estética o comodidad.</p>
+                
+                <table class="tabla-contenido">
+                    <thead>
+                        <tr>
+		                	<td>Etiqueta</td>
+		                	<td>Descripción<td>
+		                </tr>
+                    </thead>
+                    <tbody>
+		                <tr>
+		                	<td>&lt;b&gt; y &lt;strong&gt;</td>
+		                	<td>pone el texto en <b>negrita</b>, b no aplica importancia semántica y strong sí, indica que el texto es importante.</td>
+		                </tr>
+		                <tr>
+		                	<td>&lt;i&gt; y &lt;em&gt;</td>
+		                	<td>Aplica cursiva, <i>i</i> no aplica importancia y <em>em</em> sí.</td>
+		                </tr>
+		                <tr>
+		                	<td>&lt;u&gt;Subrayado</td>
+		                	<td><u>Subralla</u> el texto.</td>
+		                </tr>
+		                <tr>
+		                	<td>&lt;strike&gt; y &lt;s&gt;</td>
+		                	<td><strike>Tacha el texto</strike>, se usa para borrar o restar importancia.</td>
+		                </tr>
+		                <tr>
+		                	<td>&lt;sup&gt; Superíndice</td>
+		                	<td>Eleva el texto, se usa para operaciones matemáticas. 2<sup>3</sup></td>
+		                </tr>
+		                <tr>
+		                	<td>&lt;sub&gt; Subíndice</td>
+		                	<td>Baja el texto, se usa en ecuaciones químicas. H<sub>2</sub>O</td>
+		                </tr>
+                    </tbody>
+	            </table>
+
             <h2 id="Comentarios en HTML">5. Comentarios en HTML</h2>
+		        <p>Son lineas de texto, que no son visibles en la página web, sirven para explicar fragmentos e codigo, dejar notas, explicaciones, etc, a los desarrolladores. Aparece solo en la terminal de textoy no afecta al rendimiento. Estos se colocan con <b>&lt;!--Comentario--&gt;</b><br>Por ejemplo:</p>
+		<!-- Esto es un ejemplo de un comentario, para los apuntes de HTML básico -->
+		    <img class="ejemplo_imagen" src="../img/comentarios_html.png" alt="ejemplo de comentario">
+
             <h2 id="Imágenes en HTML">6. Imágenes en HTML</h2>
+		        <p>La etiqueta para añadir imágenes es:</p>
+                <p class="ejemplo_parrafo">&lt;img&gt;</p>
+                <p>Esta etiqueta <u>no necesita cerrarse</u>.<br> Es recomendable añadir un texto de descripción de la imagen, por motivos de accesibilidad y SEO. <br>Ejemplo de etiqueta img:</p>
+                <p class="ejemplo_parrafo"><b>&lt;img src="URL o Ruta" alt="texto_descriptivo" style="widht: 100%"&gt;</b></p>
+                <p>En este ejemplo, <u>"src"</u> sirve para señalar la fuente (source) de la imagen, puede ser una ruta local relativa o absoluta(no recomendable), o una url de internet. Por otra parte, <u>"alt"</u> marca la descripcion de la imagen, esta aparece si la imagen no carga. Por último <u>"widht"</u> y <u>"height"</u> se usan para delimitar el tamaño de la imagen, es recomendable usar porcentajes y no valores fijos (en pixeles), para mejorar la visibilidad en otros dispositivos. <br><br> Ejemplo:</p>
+                <img class="ejemplo_imagen" src="../img/imagen_ejemplo_html.png" alt="imagen_ejemplo">
             <h2 id="Enlaces en HTML">7. Enlaces en HTML</h2>
+                <p>La etiqueta <b>&lt;a&gt;</b> se usa para crear enlaces a otras páginas web, documentos o secciones dentro de la misma página. <br>El atributo principal es <b>href</b>, que define la URL de destino del enlace.</p>
+                <br>
+                <p>Otro atributo importante es <b>target</b>, que especifica dónde se abrirá el enlace. Los valores más comunes son:</p>
+                <ul>
+                    <li><b>_self:</b> Abre el enlace en la misma pestaña (valor por defecto).</li>
+                    <li><b>_blank:</b> Abre el enlace en una nueva pestaña.</li>
+                </ul>
+                <p>Por ej:</p><br>
+                <a class="ejemplo_enlace" href="https://www.pccomponentes.com/">Enlace a Pccomponentes (se abre en la misma pestaña)</a><br>
+                <a class="ejemplo_enlace" href="https://www.pccomponentes.com/" target="_blank">Enlace a Pccomponentes (se abre en una nueva pestaña)</a><br>
+                <a class="ejemplo_enlace" href="#indice">Enlace para volver al índice de esta página</a>
+
             <h2 id="Listas en HTML">8. Listas en HTML</h2>
+                <p>Las listas se utilizan para agrupar un conjunto de elementos relacionados.</p>
+                <h3>▧ Listas No Ordenadas:</h3>
+                <p class="ejemplo_parrafo">&lt;ul&gt;</p>
+                <p>Se utilizan para listas de elementos sin un orden específico. Los elementos se muestran con viñetas. Cada elemento de la lista se define con la etiqueta <b>&lt;li&gt;</b> (list item). <br> Ejemplo:</p>
+                <ul>
+                    <li>Primer item</li>
+                    <li>Segundo item</li>
+                    <li>Tercer item</li>
+                </ul>
+                <h3>▧ Listas Ordenadas</h3>
+                <p>Se utilizan para listas en las que el orden de los elementos es relevante. Los elementos se numeran automáticamente (1, 2, 3, etc.). Cada elemento también se define con la etiqueta:</p> 
+                <p class="ejemplo_parrafo"><b>&lt;li&gt;</b></p>
+                <p>Ejemplo:</p>
+                <ol>
+                    <li>Primer item</li>
+                    <li>Segundo item</li>
+                    <li>Tercer item</li>
+                </ol>
+                <h3>▧ Atributos de Listas Ordenadas</h3>
+                    <p>Se pueden usar atributos para personalizar las listas ordenadas:</p>
+                    <ul>
+                        <li><b>type:</b> Define el tipo de numeración de la lista ('1' para números, 'A' para mayúsculas, 'a' para minúsculas, 'I' para números romanos en mayúsculas, 'i' para números romanos en minúsculas).</li>
+                        <li><b>start:</b> Define el número o letra por el que debe comenzar la lista.</li>
+                    </ul>
+                    <p>Ejemplo de lista con letras mayúsculas:</p>
+                    <ol type="A">
+                        <li>Primer item</li>
+                        <li>Segundo item</li>
+                    </ol>
+                    <p>Ejemplo de lista que empieza en el número 5:</p>
+                    <ol start="5">
+                        <li>Item número 5</li>
+                        <li>Item número 6</li>
+                    </ol>
+
             <h2 id="Tablas en HTML">9. Tablas en HTML</h2>
+                <p>Las tablas se usan para mostrar datos en formato de filas y columnas.</p>
+                <h3>Etiquetas básicas de tabla:</h3>
+                <table class="tabla-contenido">
+                    <thead>
+                        <tr>
+		                	<td>Etiqueta</td>
+		                	<td>Descripción<td>
+		                </tr>
+                    </thead>
+                    <tbody>
+		                <tr>
+		                	<td><b>&lt;table&gt;:</b></td>
+		                	<td>Define la tabla y actúa como el contenedor principal.</td>
+		                </tr>
+		                <tr>
+		                	<td><b>&lt;tr&gt;:</b></td>
+		                	<td>Define una fila dentro de la tabla (table row).</td>
+		                </tr>
+		                <tr>
+		                	<td><b>&lt;td&gt;:</b></td>
+		                	<td>Crea una celda dentro de una fila (table data).</td>
+		                </tr>
+                    </tbody>
+	            </table>
+                <h3>Etiquetas de estructura de tabla:</h3>
+                <table class="tabla-contenido">
+                    <thead>
+                        <tr>
+		                	<td>Etiqueta</td>
+		                	<td>Descripción<td>
+		                </tr>
+                    </thead>
+                    <tbody>
+		                <tr>
+		                	<td><b>&lt;thead&gt;:</b></td>
+		                	<td>Agrupa el contenido del encabezado de la tabla.</td>
+		                </tr>
+		                <tr>
+		                	<td><b>&lt;tbody&gt;:</b></td>
+		                	<td>Agrupa el contenido del cuerpo de la tabla.</td>
+		                </tr>
+		                <tr>
+		                	<td><b>&lt;th&gt;:</b></td>
+		                	<td>Se utiliza para crear una celda de encabezado (table header). El texto dentro de &lt;th&gt; aparece en negrita y centrado por defecto.</td>
+		                </tr>
+                    </tbody>
+	            </table>
+                <h3>Atributos de Tabla:</h3>
+                <table class="tabla-contenido">
+                    <thead>
+                        <tr>
+		                	<td>Etiqueta</td>
+		                	<td>Descripción<td>
+		                </tr>
+                    </thead>
+                    <tbody>
+		                <tr>
+		                	<td><b>border:</b></td>
+		                	<td>Añade un borde a la tabla y a las celdas.</td>
+		                </tr>
+		                <tr>
+		                	<td><b>cellpadding:</b></td>
+		                	<td>Define el espacio entre el contenido de la celda y el borde de la celda.</td>
+		                </tr>
+		                <tr>
+		                	<td><b>cellspacing:</b></td>
+		                	<td>Controla el espacio entre las celdas de la tabla.</td>
+		                </tr>
+                    </tbody>
+	            </table>
+                <p>Ejemplo de una tabla completa:</p>
+                <table class="tabla-contenido">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manzana</td>
+                            <td>1.50€</td>
+                        </tr>
+                        <tr>
+                            <td>Kiwi</td>
+                            <td>3.00€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="ejemplo_parrafo"> Tarea Currículum (index)</p>
         </main>
     </div>
 </body>
